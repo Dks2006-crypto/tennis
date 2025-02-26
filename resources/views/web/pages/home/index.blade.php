@@ -8,5 +8,6 @@
         <meta property="og:description" content='{{ $meta_og_description ?? "meta-описание"}}' />
     </x-slot:meta>
     @include('web.sections.intro.index')
+    @include('web.sections.post.post')
     <livewire:contact-form />
  </x-base-layout>

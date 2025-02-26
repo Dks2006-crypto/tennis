@@ -11,7 +11,7 @@ class PostController extends Controller
     {
         $posts = Post::where('is_verificate', true)->get();
         return view('web.sections.post.post', [
-            'titlePage' => 'Статьи',
+            'title' => 'Статьи',
             'posts' => $posts
         ]);
     }

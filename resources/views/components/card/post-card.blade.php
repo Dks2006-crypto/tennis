@@ -1,7 +1,8 @@
 @props(['post'])
-<div class="card border p-6 rounded-xl" style="width: 100%;">
-    <div class="card-body">
-        <h5 class="card-title">{{ $post->title }}</h5>
-        <p class="card-text">{{ $post->description }}</p>
+<div class="card border rounded-xl" style="width: 100%;">
+    <div class="card-body w-full">
+        <h3 class="card-title py-2 w-full text-3xl font-bold border-b">{{ $post->title }}</h3>
+        <p class="card-text w-full text-xl py-1">{{ $post->description }}</p>
+        <p class="w-full text-sm py-1">{{ $post->content }}</p>
     </div>
 </div>

@@ -1,5 +1,5 @@
 <section aria-labelledby="intro-title" aria-describedby="intro-description"
-    class="w-full pt-[150px] md:pt-[200px] bg-no-repeat bg-cover bg-center"
+    class="w-full pt-[150px] md:pt-[200px] bg-no-repeat bg-cover bg-center bg-black"
     style="background-image: url({{ asset('images/intro-bg.png') }})">
     <x-container>
         <div class="w-full">
@@ -54,14 +54,6 @@
                     </div>
                 </div>
             </div>
-        </div>
-    </x-container>
-</section>
-
-<section>
-    <x-container>
-        <div class="pt-12 ">
-            <livewire:post-show :posts="$posts" />
         </div>
     </x-container>
 </section>

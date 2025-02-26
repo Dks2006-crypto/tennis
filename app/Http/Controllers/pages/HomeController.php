@@ -39,7 +39,7 @@ class HomeController extends Controller
     {
         $posts = Post::where('is_verificate', true)->get();
         return view('web.pages.home.index', [
-            'titlePage' => 'Статьи',
+            'title' => 'Статьи',
             'posts' => $posts
         ]);
     }

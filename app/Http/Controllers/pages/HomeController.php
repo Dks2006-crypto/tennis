@@ -37,7 +37,7 @@ class HomeController extends Controller
 
     public function post()
     {
-        $posts = Post::where('is_verificate', true)->get();
+        $posts = Post::where('is_verificate', true)->where('is_active',true)->get();
         return view('web.pages.home.index', [
             'title' => 'Статьи',
             'posts' => $posts

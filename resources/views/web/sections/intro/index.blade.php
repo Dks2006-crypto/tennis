@@ -57,3 +57,9 @@
         </div>
     </x-container>
 </section>
+<section>
+    <x-container>
+        <h1>Это страница записей</h1>
+        <livewire:post-show :post="$post" />
+    </x-container>
+</section>

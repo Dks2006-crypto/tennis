@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Pages;
 
 use App\Http\Controllers\Controller;
+use App\Models\Post;
 use App\Models\Settings;
 use App\Models\Social;
 use Illuminate\Http\Request;
@@ -30,6 +31,16 @@ class HomeController extends Controller
             'meta_og_title' => $setting->meta_title,
             'meta_og_description' => $setting->meta_description,
         ];
+
         return view('web.pages.home.index', $data, $link);
+    }
+
+    public function post()
+    {
+        $posts = Post::where('is_verificate', true)->get();
+        return view('web.pages.home.index', [
+            'titlePage' => 'Статьи',
+            'posts' => $posts
+        ]);
     }
 }

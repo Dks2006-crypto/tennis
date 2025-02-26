@@ -9,10 +9,10 @@ class PostController extends Controller
 {
     public function index()
     {
-        $post = Post::where('is_verificate', true)->get();
-        return view('web.pages.home.index', [
+        $posts = Post::where('is_verificate', true)->get();
+        return view('web.sections.post.post', [
             'titlePage' => 'Статьи',
-            'posts' => $post
+            'posts' => $posts
         ]);
     }
 }

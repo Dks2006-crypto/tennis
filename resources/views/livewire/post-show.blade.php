@@ -1,8 +1,8 @@
 <div class="container text-center">
-    <div class="row">
-        <div class="col">
+    <div class="">
+        <div class="grid grid-cols-3 gap-3">
             @foreach ($posts as $post)
-            <x-card.post-card :post="$post" />
+                <x-card.post-card :post="$post" />
             @endforeach
         </div>
     </div>
